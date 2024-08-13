@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>Products</title>
+	<meta name = "description" content = " Describe your webpage in about 50 - 160 words. "> <!-- https://rankmath.com/kb/ideal-meta-description-length/ -->
+	<meta name = "author" content = "Name of whoever made this webpage">
+	<meta name = "keywords" content = "this, keyword, is, not, in, use, anymore, and, values, are, inserted, like, this">
+	<meta charset="utf-8" > <!-- utf-8 may take up a lot of space and may therefore not be recommmended for use. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--https://www.w3schools.com/tags/tag_meta.asp -->
+	<meta http-equiv="refresh" content="" > <!-- Refresh the page every 2 seconds. Attribute being http-equiv -->
+	<link rel="stylesheet" href="../CSS/Products.css"> 
+	<style> 
+		h1 {
+		text-align: center;
+		}
+		
+		.Image th {
+		color: #C58940;
+		}
+		
+		.Image td, p {
+		color: #E4C988;
+		}
+		
+		.Image table {
+		background-color: #3C2317;
+		}
+		
+	</style>
+	
+</head>
+<body>
+	<nav>
+		<ul class="List">
+			<li><a href="../Index.html" style="padding-top:0;"><img src="../Images/Logo.jpg" style="height:50px; float:left;"></a></li>
+			<li class="hoverable" style="float:right;"><a href="Log_In.html">Log in</a></li>
+			<li class="Dropdown_2" style="float:right;"><a href="About_us.html">About Us</a>
+				<ul class="List_1">
+					<li class="hoverable" style="display:block;"><a href="Nirajan_Shah.html">Nirajan Shah</a></li>
+					<li class="hoverable" style="display:block;"><a href="Pariksha_Adhikari.html">Pariksha Adhikari</a></li>
+					<li class="hoverable" style="display:block;"><a href="Prasamsha_Thapa.html">Prasamsha Thapa</a></li>
+					<li class="hoverable" style="display:block;"><a href="Kiran_Sunuwar.html">Kiran Sunuwar</a></li>
+				</ul>
+			</li>
+			<li class="hoverable" style="float:right;"><a href="Research.html">Research</a></li>
+			<li class="Active" style="float:right;"><a href="Products.html">Products</a></li>
+			<li class="Dropdown_1" style="float:right;"><a href="Technology.html">Blog</a>
+				<ul class="List_1">
+					<li class="hoverable" style="display:block;"><a href="Technology.html">Technology</a></li>
+					<li class="hoverable" style="display:block;"><a href="Bonsai_care.html">Bonsai care</a></li>
+				</ul>
+			</li>
+			<li class="hoverable" style="float:right;"><a href="../Index.html">Home</a></li> 
+			<li style="float:right; width:650px; height: 50px;"></li>
+		</ul>
+	</nav>
+	
+	
+	<div style="display:flex; align-items: center; justify-content: space-between; position:absolute; margin-top: 50px; width: 100%;">
+		<p id="Name" style=" margin-left: 50px; font-size: 23px; color: #3C2317;">Nirajan Shah</p>
+		<h1 style=" margin-right: 50px; color: #1A0000;" >Products</h1> 
+		<img src="../Images/Shopping_Cart.png" id="Cart_icon" class="Cart_icon" style = "text-align: center; width: 35px; height: 35px; padding-right: 25px;">
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="Notification-container" style="display:flex; display:none;">
+		<div class="Inner_container"> 
+			<p id="Notification" style="font-size:23px; color: #E4C988; text-align:center; margin-top:16px; margin-bottom:0; "></p> <table style="text-align:center;"><tr><td> <p id="Close" style="margin:0; color: #E4C988; font-size: 30px; cursor: pointer;"> &times </p></td></tr></table>
+	</div>
+		</div>
+	
+		<div class="Cart_container" id="Cart_container" style="float: right; margin-top: 100px; margin-right: 20px; width: 400px; height: 350px; z-index: 5; display: none;">
+		<div class="triangle">
+			
+		</div>
+		<div class = "Cart" style= "background-color: #3C2317; width: 400px; height:inherit; z-index: 3; margin-top: 20px;"> 
+			
+			<table style="border-spacing: 65px 0;">
+				<tr>
+					<td><p>Item</p></td>
+					<td><p>Quantity</p></td>
+				<td style="text-align: center;"><div style="display:flex; justify-content: space-between; width: 130%;"><p>Price</p> <img id="Reset_cart" src="../Images/Reset_cart.png" style="text-align: center; width: 26px; height: 26px; padding-top: 13px"></div></td> 
+				</tr>
+			</table>
+			<div id="Products" style="height: 200px; overflow: auto;">
+				
+			</div>
+			<div style="display:flex; float:right; margin-right: 80px; font-size: 18px;">
+				<p style="padding-right: 20px; id="total">Total: </p> <p>&pound</p> <p id="Total"></p>
+				</div>
+				<button type="button" class="button" id="checkout" onclick="checkout()" style="width:80%; margin-left: 40px;">Checkout</button>
+			</div>
+		</div>
+	
+	
+	
+	
+	
+	
+
+		
+		<div style="display:flex; height:610px; margin-bottom:40px; padding-top: 450px;">
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px; margin-right:16px; margin-left:16px;">
+				<img src = "../Images/Product_5.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px" style="background-color: #3C2317;">
+					<tr>
+						<th style="font-size:30px; padding:0; color: #C58940;">Beech Tree</th>
+					</tr>
+					<tr>
+						<td style="color:#E4C988">Beech trees grow tall in the environment with lush, thick canopies and strikingly colored bark, and bonsai varieties are just as beautiful.<br> 
+							
+							<p style="text-align:center; font-size:25px; color:#E4C988; margin: 16px;"> <span style="text-decoration:line-through">&pound16 </span> &nbsp &pound9 </p>
+							<button type="button" class="button" id="0" onclick="AddToCart('0');notification('0');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+				<img src = "../Images/Product_6.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Fir </th>
+					</tr>
+					<tr>
+						<td>They create excellent bonsai examples and are frequently chosen among the fir (Abies) trees in the genus as Christmas trees. <br> 
+							
+							<p style="text-align:center; font-size:25px; margin: 16px;"> <span style="text-decoration:line-through">&pound20 </span> &nbsp &pound16 </p>
+							<button type="button" class="button" id="1" onclick="AddToCart('1');notification('1');" >Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+				<img src = "../Images/Product_7.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Snow Rose Bonsai</th>
+					</tr>
+					<tr>
+						<td>Snow rose bonsai trees are well renowned for their tiny but eye-catching flowers.These species can bloom at any time of the year.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound20 </span> &nbsp &pound17 </p>
+							<button type="button" class="button" id="2" onclick="AddToCart('2');notification('2');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;">
+				<img src = "../Images/Product_8.jpg" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Powder puff Bonsai</th>
+					</tr>
+					<tr>
+						<td>This varies by cultivar, the bulk of the flowers are pink or white. You'll like the strong trunk and brilliantly colored leaves as well.
+
+							<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound25 </span> &nbsp &pound20 </p>
+							<button type="button" class="button" id="3" onclick="AddToCart('3');notification('3');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+		</div>
+		
+		<div style="display:flex; height:610px; margin-bottom:40px;">
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px; margin-right:16px; margin-left:16px;">
+				<img src = "../Images/Product_1.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Pine </th>
+					</tr>
+					<tr>
+						<td>Due to their hardiness and trainability, pine trees are preferred for bonsai. In fact, practically any known bonsai style can be achieved using pine trees.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound25 </span> &nbsp &pound19 </p>
+							<button type="button" class="button" id="4" onclick="AddToCart('4');notification('4');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+				<img src = "../Images/Product_2.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Flowering Cherry</th>
+					</tr>
+					<tr>
+						<td>In the past, people have associated cherry trees with friendliness; cultivars like the Japanese blossom cherry also create lovely bonsai trees.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound20 </span> &nbsp &pound17 </p>
+							<button type="button" class="button" id="5" onclick="AddToCart('5');notification('5');">Add to cart</button>
+						</td>
+					</tr>
+			</table> 
+		</div>
+		
+		<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+			<img src = "../Images/Product_3.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+			<table width="100%" cellspacing="10px">
+				<tr>
+					<th style="font-size:30px; padding:0;">Dwarf jade </th>
+				</tr>
+				<tr>
+					<td>A softwood shrub that is semi-evergreen and makes a great starting bonsai tree is the dwarf jade plant. <br> 
+						
+						<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound25 </span> &nbsp &pound16 </p>
+						<button type="button" class="button" id="6" onclick="AddToCart('6');notification('6');">Add to cart</button>
+					</td>
+				</tr>
+			</table> 
+		</div>
+		
+		<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;">
+			<img src = "../Images/Product_4.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+			<table width="100%" cellspacing="10px">
+				<tr>
+					<th style="font-size:30px; padding:0;">Chinese Elm </th>
+				</tr>
+				<tr>
+					<td>Chinese elms, often described to as lacebark elms, are a typical choice for beginners to bonsai since they are simple to cultivate both indoors and outdoors.<br> 
+						
+						<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound30 </span> &nbsp &pound23 </p>
+						<button type="button" class="button" id="7" onclick="AddToCart('7');notification('7');">Add to cart</button>
+					</td>
+				</tr>
+			</table> 
+		</div>
+	</div>
+	
+	<div style="display:flex; height:610px; margin-bottom:40px;">
+		<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px; margin-right:16px; margin-left:16px;">
+			<img src = "../Images/Product_9.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+			<table width="100%" cellspacing="10px">
+				<tr>
+					<th style="font-size:30px; padding:0;">Meyer Lemon</th>
+				</tr>
+				<tr>
+					<td>Meyer lemons may be grown as bonsai indoors with ease, and they provide a fresh and flavorful yield all year. Simply ensure that it receives enough direct sunshine.
+
+						<br> 
+						
+						<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound20 </span> &nbsp &pound17 </p>
+						<button type="button" class="button" id="8" onclick="AddToCart('8');notification('8');">Add to cart</button>
+					</td>
+				</tr>
+			</table> 
+		</div>
+		
+		<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+			<img src = "../Images/Product_10.jpg" width="300px" height="400px" style="Overflow:hidden;"></img>
+			<table width="100%" cellspacing="10px">
+				<tr>
+					<th style="font-size:30px; padding:0;">Wisteria Bonsai Tree</th>
+				</tr>
+				<tr>
+					<td>Wisteria is a vigorous deciduous vine with alternate compound leaves. It blooms in the spring with long, hanging clusters of bluish-purple, fragrant flowers. <br> 
+						
+						<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound20 </span> &nbsp &pound16 </p>
+						<button type="button" class="button" id="9" onclick="AddToCart('9');notification('9');">Add to cart</button>
+					</td>
+				</tr>
+			</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+				<img src = "../Images/Product_11.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Japanese maple</th>
+					</tr>
+					<tr>
+						<td>Japanese maples are a fantastic choice for gardeners of all skill levels because they require little maintenance and are adaptable.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound25 </span> &nbsp &pound19 </p>
+							<button type="button" class="button" id="10" onclick="AddToCart('10');notification('10');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;">
+				<img src = "../Images/Product_12.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Crassula bonsai </th>
+					</tr>
+					<tr>
+						<td>The rare and beautiful Crassula bonsai is prized for its small size, delicate leaves, and simplicity of maintenance.Crassula bonsai can grow in a variety of lighting .<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound30 </span> &nbsp &pound27 </p>
+							<button type="button" class="button" id="11" onclick="AddToCart('11');notification('11');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+		</div>
+		
+		<div style="display:flex; height:610px; margin-bottom:40px;">
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px; margin-right:16px; margin-left:16px;">
+				<img src = "../Images/Product_13.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Pomegranate tree</th>
+					</tr>
+					<tr>
+						<td> Popular and decorative pomegranate bonsai trees are prized for their vivid, eye-catching fruit and delicate, intricate branches.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound34 </span> &nbsp &pound27 </p>
+							<button type="button" class="button" id="12" onclick="AddToCart('12');notification('12');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+				<img src = "../Images/Product_14.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Ficus bonsai tree </th>
+					</tr>
+					<tr>
+						<td>A ficus bonsai tree is a beautiful and useful addition to any home or workplace.  also requires very little upkeep,only occasional watering and soil with excellent drainage.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound34 </span> &nbsp &pound30 </p>
+							<button type="button" class="button" id="13" onclick="AddToCart('13');notification('13');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+				<img src = "../Images/Product_15.jpg" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Juniper Bonsai</th>
+					</tr>
+					<tr>
+						<td>The juniper bonsai is a stunning, low-maintenance tree with a unique shape and plenty of lush green foliage.It adds versatility to any indoor environment .<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound25 </span> &nbsp &pound21 </p>
+							<button type="button" class="button" id="14" onclick="AddToCart('14');notification('14');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;">
+				<img src = "../Images/Product_16.jpg" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Mongolia stellata </th>
+					</tr>
+					<tr>
+						<td>A magnificent and refined tree called Magnolia Stellata is well-known for its gorgeous white flowers that resemble stars.Blossoms and appealing appearance.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound38 </span> &nbsp &pound32 </p>
+							<button type="button" class="button" id="15" onclick="AddToCart('15');notification('15');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+		</div>
+		
+		<div style="display:flex; height:610px; margin-bottom:64px;">
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px; margin-right:16px; margin-left:16px;">
+				<img src = "../Images/Product_17.png" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Oak bonsai tree</th>
+					</tr>
+					<tr>
+						<td>The bonsai oak tree is a great, solidly built tree with a unique personality that is ideal for bonsai enthusiasts.for a lovely, long-lasting addition.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound14 </span> &nbsp &pound10 </p>
+							<button type="button" class="button" id="16" onclick="AddToCart('16');notification('16');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+				<img src = "../Images/Product_18.jpg" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Tridient bonsai </th>
+					</tr>
+					<tr>
+						<td>A stunning and useful tree, the trident maple bonsai has brilliant red foliage in the fall.It is a fantastic option for bonsai aficionados of all skill levels.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound30 </span> &nbsp &pound19 </p>
+							<button type="button" class="button" id="17" onclick="AddToCart('17');notification('17');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;  margin-right:16px;">
+				<img src = "../Images/Product_19.jpg" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Zelkov bonsai</th>
+					</tr>
+					<tr>
+						<td>Zelkov Bonsai is a stunning and distinctive tree with vibrant green leaves that is perfect for bonsai lovers.A touch of nature into any indoor or outdoor location.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound30 </span> &nbsp &pound20 </p>
+							<button type="button" class="button" id="18" onclick="AddToCart('18');notification('18');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+			
+			<div class="Image" style="display:flex; flex-direction:column; width:300px; height:600px; margin-top:40px; margin-bottom:40px;">
+				<img src = "../Images/Product_20.jpg" width="300px" height="400px" style="Overflow:hidden;"></img>
+				<table width="100%" cellspacing="10px">
+					<tr>
+						<th style="font-size:30px; padding:0;">Umbrella Bonsai</th>
+					</tr>
+					<tr>
+						<td>An exotic tree with a distinctive appearance, the Hawaiian Umbrella is perfect for bringing a bit of tropical elegance to any indoor or outdoor setting.<br> 
+							
+							<p style="text-align:center; font-size:25px;  margin: 16px;"> <span style="text-decoration:line-through">&pound21 </span> &nbsp &pound18 </p>
+							<button type="button" class="button" id="19" onclick="AddToCart('19');notification('19');">Add to cart</button>
+						</td>
+					</tr>
+				</table> 
+			</div>
+		</div>
+		
+		
+		
+	</div> 
+	
+<footer> 
+	<table height="200px">
+		<tr>
+			<td>
+				<img src = "../Images/Logo.jpg" style="height: 250px;">
+			</td>
+			<td style="text-align: center; color: #E4C988;">
+				<p>Quick Navigation</p>
+				
+				<a style= "color: #DE9000" href = "Technology.html">Blog</a> <br>
+				<a style= "color: #DE9000" href = "Products.html">Products</a> <br>
+				<a style= "color: #DE9000" href = "Research.html">Research</a> <br>
+				<a style= "color: #DE9000" href = "About_us.html">About us</a> <br>
+				<a style= "color: #DE9000" href = "Log_In.html">Log In</a> <br>
+			</td>
+			<td>	
+				<table style="width: 55%;">
+					<tr>
+						<td><img src="../Images/Address.png" style="width: 36px; height: 36px;"></td>
+						<td><p style="text-align: center; color:#E4C988;"> Lalitpur <br> Nepal </p></td>
+						
+					</tr>
+					<tr>
+						<td><img src="../Images/Landline.png" style="width: 36px; height: 36px;"></td>
+						<td><p style="text-align: center; color:#E4C988;"> +977 9848434523 </p></td>
+					</tr>
+					<tr>
+						<td><img src="../Images/Email.png" style="width: 36px; height: 36px;"></td>
+						<td><p style="text-align: center; color:#E4C988;"> BonsaiCastle@email.com </p></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<p style="text-align: center; color:#E4C988;">About us</p>
+				<p style="text-align: center; color:#E4C988; padding-right:20px;">We are a team comprising of members who are committed to the well being of both the bonsai and the cutomer.
+					We use only the finest soil to nurture our bonsai. We care for our bonsai with utmost dilligence.</p>
+			</td>
+		</tr>
+	</table>
+</footer>
+
+	
+	
+</body>
+
+
+</html>										
+
+<script src="../JS/Products.js" async> </script>
+
+

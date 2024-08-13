@@ -1,0 +1,343 @@
+body {
+	background-color: #000000;
+	color: white;
+	/* background-image: url('../Images/Bonsai.jpg'); 
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+	background-size: cover; */
+	margin: 0;
+	text-align: center;
+	line-height: 160%;
+	
+}
+
+
+/* This is the start of navigation bar section. */
+
+.nav {
+	width: 100%;
+}
+
+.List {
+	list-style-type: none;
+	background-color: #3C2317;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+	position:absolute; 
+	width: 100%;
+}
+
+.List_1{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #3C2317;
+	display: none;
+	position: absolute;
+	z-index: 1;
+}
+
+
+nav li {
+	display: inline-block;
+}
+
+nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 18px 18px;
+	text-decoration: none;
+}
+
+h3 {
+	margin-bottom: 0;
+	padding-left: 10px;
+	font-family: mono-space;
+}
+
+.Active {
+	background-color: #8B4513;
+}
+
+.Active:hover {
+	background-color: #B06500;
+}
+
+
+.Dropdown_1:hover .List_1 {
+	display: block;
+}
+
+.Dropdown_2:hover .List_1 {
+	display: block;
+}
+
+.hoverable:hover, .Dropdown_1:hover, .Dropdown_2:hover{
+	background-color: #B06500
+}
+
+/* This is the end of the navigation bar section. */
+
+/* This is the start of the image slider section. */
+.Slider {
+	overflow: hidden; 
+	height: 550px;
+	border-bottom: 5px solid #3C2317; 
+	padding-top: 61px;
+}
+
+.Slider figure{
+	position: relative;
+	width: 1000%; 
+	margin: 0; 
+	animation: 50s Slider infinite; 
+}
+
+.Slider figure img{
+	float: left; 
+	width: 10%;
+	height: 550px; 
+}
+
+@keyframes Slider{
+	
+	0% {
+		right:0;
+	}
+	
+	10%{
+		right:0;
+	}
+	
+	11% {
+		right: 100%;
+	}
+	
+	20%{
+		right: 100%;
+	}
+	
+	21%{
+		right: 200%;
+	}
+	
+	30% {
+		right: 200%;
+	}
+	
+	31%{
+		right: 300%;
+	}
+	
+	40%{
+		right: 300%;
+	}
+	
+	41%{
+		right: 400%;
+	}
+	
+	50%{
+		right: 400%;
+	}
+	
+	51%{
+		right: 500%;
+	}
+	
+	60%{
+		right: 500%;
+	}
+	
+	61%{
+		right: 600%;
+	}
+	
+	70%{
+		right: 600%;
+	}
+	
+	71%{
+		right: 700%;
+	}
+	
+	80%{
+		right: 700%;
+	}
+	
+	81%{
+		right: 800%;
+	}
+	
+	90%{
+		right: 800%;
+	}
+	
+	91%{
+		right: 900%;
+	}
+	
+	100%{
+		right: 900%;
+	}
+}
+/* This is the end of the image slider section. */
+
+/* This is the start of the parallax section. */
+
+.parallax1 {
+	background: url('../Images/Forest_path.jpg');
+	background-size: cover;
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-attachment: fixed;
+	position: relative;
+}
+
+.inner {
+	padding-top: 23%;
+	padding-bottom: 23%;
+}
+
+.parallax2 {
+	background: url('../Images/Cactus.jpg'); 
+	background-size: cover;
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-attachment: fixed;
+}
+
+.Inner {
+	padding: 20%;
+}
+
+.parallax3 {
+	background: url('../Images/Bonsai.jpg');
+	background-size: cover;
+	padding: 18%;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.flex {
+	padding: 10px
+}
+
+.Column_1 {
+	margin: 10px;
+}
+
+.Column_2 {
+	margin: 10px;
+}
+
+.Column_3 {
+	margin: 10px;
+}
+
+.Column_4 {
+	margin: 10px;
+}
+
+
+.parallax4 {
+	background: url('../Images/Fern.jpg');
+	background-size: cover;
+	background-position: center; 
+	background-attachment: fixed;
+	padding: 18%
+}
+
+.parallax5 {
+	background: url('../Images/Forest.jpg');
+	background-size: cover;
+	background-position: center; 
+	background-attachment: fixed;
+	padding: 23%
+}
+
+.Products {
+	background: url('../Images/Floor_2.jpg');
+	background-size: cover;
+	background-position: center; 
+	padding-bottom: 50px;
+}
+
+.parallax6 {
+	background: url('../Images/Plant.jpg');
+	background-size: cover;
+	background-position: center; 
+	background-attachment: fixed;
+	padding: 20%
+}
+
+.parallax7 {
+	background: url('../Images/Scenery.jpg');
+	background-size: cover;
+	background-position: center; 
+	background-attachment: fixed;
+	padding: 23%
+}
+
+.Team {
+	background: url('../Images/Floor_2.jpg');
+	background-size: cover;
+	background-position: center; 
+	border-top: solid 5px green;
+	padding-bottom: 50px;
+}
+
+
+/* This is the end the parallax section. */
+
+/* This is the start of the card section. */
+.Image {
+	position:relative;
+	transition: transform 500ms ease;
+}
+
+.Image:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+.button{
+	width:100%;
+	background-color: #C55300;
+	border: none;
+	padding: 8px;
+	transition-duration: 0.3s;
+}
+
+.button:hover{
+	background-color: #E4C988;
+	color: #362706;
+}
+
+.Image th {
+	color: #DE9000;
+}
+
+.Image td, p {
+	color: #E4C988;
+}
+
+.Image table {
+	background-color: #3C2317;
+}
+
+a {
+	color: #DE9000;
+}
+
+
+/* This is the end of the card section. */
+
+footer table{
+	background-color: #3C2317;
+	table-layout: fixed;
+	width: 100%;
+}
+	

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+	<title>Log In</title>
+	<meta name = "description" content = " A page mimicking a login page. It has form validation. "> <!-- https://rankmath.com/kb/ideal-meta-description-length/ -->
+	<meta name = "author" content = "Name of whoever made this webpage">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--https://www.w3schools.com/tags/tag_meta.asp -->
+	<link rel="stylesheet" href="../CSS/Log_In.css"> 
+	<style> 
+		p {
+		line-height: 180%;
+		font-size : 16px;
+		}
+		
+		.Login_container {
+		padding-bottom: 130px;
+		padding-left: 130px;
+		padding-right: 130px;
+		}
+		
+		input[type=text]{
+		width: 80%;
+		color: #F2D388;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		background-color: #562B08;
+		border-bottom: 2px solid #FEF5AC;
+		font-size: 17px;
+		}
+		
+		input[type=submit]{
+		margin-left: 80px;
+		margin-top: 18px;
+		border: none;
+		background-color: #FEF5AC;
+		border-radius: 26px;
+		padding: 20px 50px;
+		}
+		
+		input[type=password]{
+		width: 80%;
+		color: #F2D388;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		background-color: #562B08;
+		border-bottom: 2px solid #FEF5AC;
+		font-size: 17px;
+		}
+		
+		input[type=submit]:hover {
+		background-color: #C55300;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<nav>
+		<ul class="List" style="position:absolute;">
+			<li><a href="../Index.html" style="padding-top:0;"><img src="../Images/Logo.jpg" style="height:50px; float:left;"></a></li>
+			<li class="Selected" style="float:right;"><a href="Log_In.html">Log In</a></li>
+			<li class="Dropdown_2" style="float:right;"><a href="About_us.html">About Us</a>
+				<ul class="List_1">
+					<li class="hoverable" style="display:block;"><a href="Nirajan_Shah.html">Nirajan Shah</a></li>
+					<li class="hoverable" style="display:block;"><a href="Pariksha_Adhikari.html">Pariksha Adhikari</a></li>
+					<li class="hoverable" style="display:block;"><a href="Prasamsha_Thapa.html">Prasamsha</a></li>
+					<li class="hoverable" style="display:block;"><a href="Kiran_Sunuwar.html">Kiran Sunuwar</a></li>
+				</ul>
+			</li>
+			<li class="hoverable" style="float:right;"><a href="Research.html">Research</a></li>
+			<li class="hoverable" style="float:right;"><a href="Products.html">Products</a></li>
+			<li class="Dropdown_1" style="float:right;"><a  href="Technology.html">Blog</a>
+				<ul class="List_1">
+					<li class="hoverable" style="display:block;"><a href="Technology.html">Technology</a></li>
+					<li class="hoverable" style="display:block;"><a href="Bonsai_care.html">Bonsai care</a></li>
+				</ul>
+			</li>
+			<li class="hoverable" style="float:right;"><a href="../Index.html">Home</a></li> 
+			<li style="float:right; width:650px; height: 50px;"></li>
+		</ul>
+	</nav>
+	
+	
+	
+	<div class="Login_container">
+		<div class = "Login_Left"> 
+			<div class="Photo">
+			</div>
+		</div>
+		
+		<div class="Login_Right">
+			<h1 style="text-align: center; margin-top: 80px; color: #FEF5AC;"> BonsaiCastle </h1>
+			<p style="text-align: center; margin-top: 55px; font-size: 18px; color: #FEF5AC;"> Welcome to BonsaiCastle </p>
+			<div style="padding-left: 90px;">
+			<form style="margin-top: 26px;">
+			<input type="text" id="Username" name="Usernname" placeholder="Enter your username"> <br><br> 
+			<input type="password" id="Password" name="Password" placeholder="Enter your password"> <br><br>
+			<input type="submit" id="button" onclick="Login();" value="Sign in">
+			</form>
+			</div>
+		<p style="text-align: center; margin-top: 40px; color: #FEF5AC;"> New to BonsaiCastle ? <a href="Sign_Up.html">Create account</a></p>
+		</div>
+		
+			
+	</div>
+	
+<footer> 
+	<table height="200px">
+		<tr>
+			<td>
+				<img src = "../Images/Logo.jpg" style="height: 250px;">
+			</td>
+			<td style="text-align: center; color: #E4C988;">
+				<p>Quick Navigation</p>
+				
+				<a style= "color: #DE9000" href = "Technology.html">Blog</a> <br>
+				<a style= "color: #DE9000" href = "Products.html">Products</a> <br>
+				<a style= "color: #DE9000" href = "Research.html">Research</a> <br>
+				<a style= "color: #DE9000" href = "About_us.html">About us</a> <br>
+				<a style= "color: #DE9000" href = "Log_In.html">Log In</a> <br>
+			</td>
+			<td>	
+				<table style="width: 55%;">
+					<tr>
+						<td><img src="../Images/Address.png" style="width: 36px; height: 36px;"></td>
+						<td><p style="text-align: center; color:#E4C988;"> Lalitpur <br> Nepal </p></td>
+						
+					</tr>
+					<tr>
+						<td><img src="../Images/Landline.png" style="width: 36px; height: 36px;"></td>
+						<td><p style="text-align: center; color:#E4C988;"> +977 9848434523 </p></td>
+					</tr>
+					<tr>
+						<td><img src="../Images/Email.png" style="width: 36px; height: 36px;"></td>
+						<td><p style="text-align: center; color:#E4C988;"> BonsaiCastle@email.com </p></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<p style="text-align: center; color:#E4C988;">About us</p>
+				<p style="text-align: center; color:#E4C988; padding-right:20px;">
+					We are a team comprising of members who are committed to the well being of both the bonsai and the cutomer.
+					We use only the finest soil to nurture our bonsai. We care for our bonsai with utmost dilligence.</p>
+			</td>
+		</tr>
+	</table>
+</footer>
+	
+	<script src="../JS/Log_In.js"></script>
+	
+</body>
+</html>																															
